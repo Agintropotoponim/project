@@ -1,0 +1,32 @@
+.nav__btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 60px;
+    gap: 10px;
+    width: 205px;
+    height: 60px;
+    background: rgba(198, 120, 62, 0.8);
+    border-radius: 5px;
+    cursor: pointer;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.05em;
+    color: #FCFCFC;
+
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none;
+     -khtml-user-select: none; 
+       -moz-user-select: none; 
+        -ms-user-select: none; 
+            user-select: none; 
+}
+
+.nav__btn:hover{
+    color: silver
+}

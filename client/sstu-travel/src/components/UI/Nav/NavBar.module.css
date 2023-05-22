@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Arya&family=Montserrat:wght@500&display=swap');
+
+nav {
+    display: flex; /* two containers can't be on the same position in nav-container. it divides nav*/
+    height: 8vh;
+    border: 1px solid black;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.div__nav {
+    display: flex;
+    margin: 0px auto;
+    max-width: 1660px;
+
+}
+
+.logo {
+    display: flex;
+    font-size: 30px;
+    cursor: pointer;
+    min-width: 105px;
+    color: #092F3E;
+    font-family: "Charle";
+
+    
+}
+
+ul.nav {
+    color: #092F3E;
+    padding-left: 300px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap left;
+    margin: 0px auto;
+
+}
+
+ul.nav li {
+    cursor: pointer;
+    font-size: 26.5px;
+    line-height: 24px;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    color: #092F3E;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+
+
+
+a:visited {
+    color: #092F3E;
+
+}
+
+.logo__link:hover {
+
+    color: #9b2d30;
+    transition: 0.35s;
+}
+
+.logo__link {
+    color: #092F3E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link:hover {
+    color: #9b2d30;
+    transition: 0.25s;
+}
+
+.logo__link:active {
+    color: #c53439;
+}
+
+.link:active {
+    color: #c53439;
+}
+
+.link {
+    color: #092F3E;
+    cursor: pointer;
+}
+

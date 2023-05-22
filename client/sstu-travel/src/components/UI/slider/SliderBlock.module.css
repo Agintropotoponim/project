@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Arya&family=Montserrat:wght@400;500&display=swap');
+
+@font-face {
+    font-family: 'SignPainter';
+    src: url('../../../assets/signpainter.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+   }
+
+.header2{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 64px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.05em;
+
+    color: #3A555E;
+
+    width: fit-content;
+
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none;
+     -khtml-user-select: none; 
+       -moz-user-select: none; 
+        -ms-user-select: none; 
+            user-select: none; 
+
+}
+
+.header3{
+    font-family: 'SignPainter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 64px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.05em;
+
+    color: #092F3E;
+
+    width: fit-content;
+
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none;
+     -khtml-user-select: none; 
+       -moz-user-select: none; 
+        -ms-user-select: none; 
+            user-select: none; 
+
+}
+
+.flex__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.width{
+    width: 1500px;
+}
+
+.image_align{
+    width: fit-content;
+    height: fit-content;
+    object-fit:contain;
+    border-radius: 10px;
+    position: relative;
+}
+
+.block{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+}
+
+.announcements{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration: underline;
+  color: #092F3E;
+}
+
+.image__description{
+  position: absolute;
+  left: 50px;
+  top: 30px;
+}
+

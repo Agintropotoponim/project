@@ -1,0 +1,47 @@
+.nav__block{
+    background: url(../../../assets/img/Vector\ 1.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 70vw;
+    height: 100vh;
+    border: 1px solid black;
+}
+
+.logo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+    border: 1px solid red;
+    flex-direction: column;
+}
+
+.header{
+    font-family: 'Arya';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 136px;
+    line-height: 100px;
+    letter-spacing: 0.05em;
+    color: #0B3108;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+}
+
+.sub__header{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 0.03em;
+    color: #092F3E;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none; 
+    -ms-user-select: none;
+}

@@ -1,0 +1,9 @@
+.App{
+  
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    height: calc(fit-content + 500px);
+}
