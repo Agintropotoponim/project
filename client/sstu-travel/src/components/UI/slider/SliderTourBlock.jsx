@@ -42,10 +42,10 @@ function SliderTourBlock() {
                     <SwiperSlide key={i} className={classes.block}>
                         <section className={classes.flex__container}>
                             <div className={classes.flex__container}>
-                                <img align="middle" className={classes.image_align} src={"http://localhost:8080/images/tour" + (i + 1) + ".svg"} alt="slide_image" crossOrigin="anonymous" />
+                                <img align="middle" className={classes.image_align} src={e.cover} alt="slide_image" crossOrigin="anonymous" />
                                 <span className={classes.image__description}></span>
                             </div>
-                            <Link to={'/tours'} className={classes.announcements}>Подробнее</Link>
+                            <Link to={'../' + e.id} className={classes.announcements}>Подробнее</Link>
                         </section>
                     </SwiperSlide>)
             } />

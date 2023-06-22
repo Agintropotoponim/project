@@ -8,6 +8,8 @@ import classes from './MainPage.module.css'
 
 import SliderEmployeeBlock from "../components/UI/slider/SliderEmployeeBlock";
 import SliderTourBlock from "../components/UI/slider/SliderTourBlock";
+import Feedbacks from "../components/UI/feedback/Feedbacks";
+import FeedbackForm from "../components/UI/feedback/FeedbackForm";
 
 
 function MainPage() {
@@ -20,6 +22,8 @@ function MainPage() {
             <SliderTourBlock />
             <WhyWithUs />
             <Teamleads />
+            <Feedbacks />
+            <FeedbackForm />
         </main>
     )
 }

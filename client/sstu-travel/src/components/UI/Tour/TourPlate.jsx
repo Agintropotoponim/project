@@ -19,7 +19,7 @@ function TourPlate() {
     return (
         <div>
             <NavBar />
-            {tours.map(t => <Tour key={t.id} id={t.id} text={t.description} leader={t.leader} />)}
+            {tours.map(t => <Tour key={t.id} id={t.id} text={t.description} leader={t.employee.name + " " + t.employee.surname} />)}
         </div>
     )
 }

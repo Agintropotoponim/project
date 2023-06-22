@@ -26,8 +26,6 @@ function SliderEmployeeBlock() {
                 setEmployees(data);
             })
             .catch(error => console.log(error));
-
-
     }, []);
 
 
@@ -41,10 +39,10 @@ function SliderEmployeeBlock() {
                     <SwiperSlide key={i} className={classes.block}>
                         <section className={classes.flex__container}>
                             <div className={classes.flex__container}>
-                                <img className={classes.image_align} src={"http://localhost:8080/images/emp" + (i + 1) + ".svg"} alt="slide_image" crossOrigin="anonymous" />
+                                <img className={classes.image_align} src={e.poster} alt="slide_image" crossOrigin="anonymous" />
 
                             </div>
-                            <Link to={'/tours'} className={classes.announcements}>Анонсы его/её путешествий</Link>
+                            <Link to={'/employees/' + e.id} className={classes.announcements}>Анонсы его/её путешествий</Link>
                         </section>
                     </SwiperSlide>)
             } />
