@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Tour from './Tour';
-import NavBar from '../Nav/NavBar';
-
+import NavBar from '../Nav/NavBar'
 
 
 function TourPlate() {

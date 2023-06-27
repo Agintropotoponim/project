@@ -12,14 +12,14 @@ function Feedbacks() {
             <section className={classes.articles__block}>
                 <article className={classes.feedback__small}>
                     <div className={classes.articles__block}>
-                        <img className={classes.avatar__small} src={"http://localhost:8080/images/andrey.svg"} alt="photo" />
+                        <img className={classes.avatar__small} src={"http://localhost:8080/images/andrey.svg"} alt="" />
                         <span>Andrey</span>
                     </div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus ratione optio fugit asperiores sapiente modi eveniet perferendis veniam laborum iste?</p>
                 </article>
                 <article className={classes.feedback}>
                     <div className={classes.articles__block}>
-                        <img className={classes.avatar} src={"http://localhost:8080/images/stas.svg"} alt="photo" />
+                        <img className={classes.avatar} src={"http://localhost:8080/images/stas.svg"} alt="" />
                         <span>Stas</span>
                     </div>
 
@@ -28,7 +28,7 @@ function Feedbacks() {
 
                 <article className={classes.feedback__small}>
                     <div className={classes.articles__block}>
-                        <img className={classes.avatar__small} src={"http://localhost:8080/images/karolina.svg"} alt="photo" />
+                        <img className={classes.avatar__small} src={"http://localhost:8080/images/karolina.svg"} alt="" />
                         <span>Karolina</span>
                     </div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam non delectus necessitatibus nesciunt dolor dolore?</p>
