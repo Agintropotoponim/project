@@ -1,0 +1,40 @@
+.flex{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input__size{
+    width: 1000px;
+    height: 400px;
+    border: 1px solid red;
+}
+
+.input {
+    padding:5px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.input:focus {
+    border-color:#333;
+}
+
+.button {
+    padding:5px 15px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+
+.red{
+    color: red;
+}
+
+.green{
+    color:green
+}

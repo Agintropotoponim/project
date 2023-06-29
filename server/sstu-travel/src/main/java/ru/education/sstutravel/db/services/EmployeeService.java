@@ -5,8 +5,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.education.sstutravel.Util;
-import ru.education.sstutravel.db.dto.EmployeeDto;
-import ru.education.sstutravel.db.dto.TourDto;
+
 import ru.education.sstutravel.db.entities.Employee;
 import ru.education.sstutravel.db.entities.Tour;
 import ru.education.sstutravel.db.repos.EmployeeRepo;
@@ -25,24 +24,7 @@ public class EmployeeService {
         return empRepo.findAll();
     }
 
-    /*
-    public List<EmployeeDto> readAllDto(){
-        List<Employee> emps = readAll();
-        return emps.stream()
-                .map(e ->
-                        new EmployeeDto(
-                                e.getId(),
-                                e.getName(),
-                                e.getSurname(),
-                                e.getMiddleName(),
-                                e.getPosition(),
-                                e.getAvatar(),
-                                e.getPoster()
-                        )
-                )
-                .toList();
-    }
-    */
+
 
     public Employee getById(Long id){
         return empRepo.getById(id);
@@ -59,6 +41,8 @@ public class EmployeeService {
         BeanUtils.copyProperties(emp, empFromDb, "id");
         return empRepo.save(empFromDb);
     }
+
+
 
     public void delete(Employee emp){
         empRepo.delete(emp);

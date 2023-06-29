@@ -1,19 +1,16 @@
 package ru.education.sstutravel.pojo;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
-
-import java.util.Set;
-
+import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
-public class SingupRequest {
+@NoArgsConstructor
+public class ProfileResponse {
+    private Long id;
     private String username;
-    private String email;
-    private String password;
-    //private Set<String> roles;
-
-
+    private String userpic;
 
 }

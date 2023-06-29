@@ -2,7 +2,7 @@ package ru.education.sstutravel.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import ru.education.sstutravel.db.dto.EmployeeDto;
+
 import ru.education.sstutravel.db.entities.Employee;
 import ru.education.sstutravel.db.entities.Tour;
 import ru.education.sstutravel.db.repos.EmployeeRepo;

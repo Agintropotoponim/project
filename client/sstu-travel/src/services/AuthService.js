@@ -1,5 +1,8 @@
-import $api from "../http";
+import $api, { SECRET } from "../http";
 import { AxiosResponse } from "axios";
+
+
+const CryptoJS = require("crypto-js");
 
 export default class AuthService {
 
@@ -12,11 +15,29 @@ export default class AuthService {
         return $api.post('/api/auth/signup', { username, email, password })
     }
 
-    static async logout() {
-        return $api.post('/logout')
+
+
+
+
+    static encryptAndSaveDataToLocalStorage(data) {
+
+        const jsonData = JSON.stringify(data);
+
+        const encryptedData = CryptoJS.AES.encrypt(jsonData, SECRET).toString();
+
+        localStorage.setItem("userData", encryptedData);
     }
 
-    static testUserAPI() {
-        return $api.get('/api/test/user');
+    static decryptAndGetDataFromLocalStorage() {
+
+        const encryptedData = localStorage.getItem("userData");
+
+        const decryptedBytes = CryptoJS.AES.decrypt(encryptedData, SECRET);
+
+        const decryptedData = decryptedBytes.toString(CryptoJS.enc.Utf8);
+
+        const jsonData = JSON.parse(decryptedData);
+
+        return jsonData;
     }
 }

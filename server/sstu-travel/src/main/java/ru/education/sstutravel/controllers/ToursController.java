@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.*;
 import ru.education.sstutravel.db.entities.Tour;
 import ru.education.sstutravel.db.services.TourService;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -24,13 +23,20 @@ public class ToursController {
 
     @GetMapping
     public List<Tour> readAll(){
+
         return tourServ.readAll();
     }
 
     @GetMapping("{id}")
     public Tour readOne(@PathVariable("id") Tour tour){
+        System.out.println("aaaaaaaa");
         return tour;
     }
+
+
+
+
+
     @PostMapping
     public Tour create(@RequestBody Tour tour){
         return tourServ.create(tour);

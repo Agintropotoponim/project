@@ -16,7 +16,7 @@ function NavBlock() {
             <div className={classes.logo}>
                 <h1 className={classes.header}>SSTU Travel</h1>
                 <h2 className={classes.sub__header}>Туры и горные походы</h2>
-                <CustomButton text={"Хочу пойти"} />
+                <Link to="/tours"><CustomButton text={"Хочу пойти"} /></Link>
             </div>
         </div>
 

@@ -45,7 +45,7 @@ function SliderTourBlock() {
                                 <img align="middle" className={classes.image_align} src={e.cover} alt="slide_image" crossOrigin="anonymous" />
                                 <span className={classes.image__description}></span>
                             </div>
-                            <Link to={'../' + e.id} className={classes.announcements}>Подробнее</Link>
+                            <Link to={`/tours/${e.id}`} className={classes.announcements}>Подробнее</Link>
                         </section>
                     </SwiperSlide>)
             } />

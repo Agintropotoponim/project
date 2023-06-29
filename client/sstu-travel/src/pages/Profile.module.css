@@ -1,0 +1,18 @@
+
+.photo{
+    width: 200px;
+    height: 200px;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.size{
+    height: 250px;
+    border: 1px solid red;
+}
+

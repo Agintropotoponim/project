@@ -31,35 +31,10 @@ public class TourService {
         return tourRepo.findAll();
     }
 
-
-
-    /*
-    public List<TourDto> readAllDto(){
-        List<Tour> tours = tourRepo.findAll();
-        return tours.stream()
-                .map(t ->
-                        new TourDto(
-                                t.getId(),
-                                t.getName(),
-                                t.getDescription(),
-                                tourRepo.getLeaderName(t.getLeader()),
-                                t.getCover(),
-                                t.getKeys()
-                        )
-                )
-                .toList();
-    }
-     */
-
-
-
-
-
     public Tour create(Tour tour){
         //tour.setEmployee(employeeService.getById());
         return tourRepo.save(tour);
     }
-
 
     public Tour update(Tour tourFromDb, Tour tour) {
         BeanUtils.copyProperties(tour, tourFromDb, "id");

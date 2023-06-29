@@ -24,11 +24,10 @@ public class UserDetailsImpl implements UserDetails {
 
     private Long id;
     private String name;
+    private String surname;
+    private String middle_name;
     private String userpic;
     private String email;
-    private String gender;
-    private String locale;
-    private LocalDateTime lastVisit;
     private String username;
     @JsonIgnore
     private String password;
@@ -43,14 +42,14 @@ public class UserDetailsImpl implements UserDetails {
         return new UserDetailsImpl(
                 user.getId(),
                 user.getName(),
+                user.getSurname(),
+                user.getMiddle_name(),
                 user.getUserpic(),
                 user.getEmail(),
-                user.getGender(),
-                user.getLocale(),
-                user.getLastVisit(),
                 user.getUsername(),
                 user.getPassword(),
-                authorities);
+                authorities
+        );
     }
 
 

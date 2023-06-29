@@ -25,19 +25,14 @@ public class Employee{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
-    private String surname;
-    private String middleName;
+    @OneToOne
+    @JoinColumn(name = "usr")
+    private User usr;
     private String position;
     private String avatar;
     private String poster;
-    private String username;
-    private String password;
     @OneToMany(mappedBy = "employee")
     @JsonIgnoreProperties("employee")
     private List<Tour> tours = new ArrayList<>();
-
-
-
 
 }

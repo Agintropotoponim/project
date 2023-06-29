@@ -1,6 +1,8 @@
 package ru.education.sstutravel.db.entities;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -29,11 +31,10 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
+    private String surname;
+    private String middle_name;
     private String userpic;
     private String email;
-    private String gender;
-    private String locale;
-    private LocalDateTime lastVisit;
     private String username;
     private String password;
 
@@ -44,9 +45,32 @@ public class User {
     private Set<Authority> authorities = new HashSet<>();
 
 
+
+
+    @OneToOne(mappedBy = "usr", cascade = CascadeType.ALL)
+    @JsonIgnoreProperties("usr")
+    private Employee employee;
+
     public User(String username, String email, String password) {
         this.email = email;
         this.username = username;
         this.password = password;
+    }
+
+    public User(
+            String name,
+            String surname,
+            String middleName,
+            String userpic,
+            String email,
+            String username
+            ){
+
+        this.name = name;
+        this.surname = surname;
+        this.middle_name = middleName;
+        this.userpic = userpic;
+        this.email = email;
+        this.username = username;
     }
 }
