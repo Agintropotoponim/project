@@ -1,5 +1,5 @@
-import axios from "axios";
-import { useContext, useEffect, useState } from "react";
+
+import { useEffect, useState } from "react";
 import AuthService from "../services/AuthService";
 import classes from "./Profile.module.css"
 import loginClasses from './LoginForm.module.css'
@@ -129,6 +129,7 @@ function Profile() {
                         userpic: userpic,
                         email: email,
                         username: username,
+                        roles: user.roles
                     }
 
 

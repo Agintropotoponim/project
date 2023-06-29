@@ -1,10 +1,7 @@
 import React from 'react';
 import classes from './NavBlock.module.css'
-import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
-
-import logo from "../../../assets/img/Vector 1.svg"
+import { Link } from 'react-router-dom';
 import NavBar from './NavBar';
-import button from "../../../assets/img/button.svg"
 import CustomButton from '../button/CustomButton';
 
 function NavBlock() {

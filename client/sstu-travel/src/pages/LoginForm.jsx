@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { Context } from "../index.js";
 import { Link, useNavigate } from "react-router-dom";
 import classes from './LoginForm.module.css'
-import validator from "validator";
+
 
 
 function LoginForm() {

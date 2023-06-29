@@ -5,16 +5,14 @@ import WhyWithUs from "../components/UI/WhyWithUs/WhyWithUs";
 
 import classes from './MainPage.module.css'
 
-
-import SliderEmployeeBlock from "../components/UI/slider/SliderEmployeeBlock";
 import SliderTourBlock from "../components/UI/slider/SliderTourBlock";
-import Feedbacks from "../components/UI/feedback/Feedbacks";
-import FeedbackForm from "../components/UI/feedback/FeedbackForm";
+
 
 
 function MainPage() {
 
-
+    //const user = AuthService.decryptAndGetDataFromLocalStorage();
+    //console.log(user)
 
     return (
         <main className={classes.flex__container}>
@@ -22,8 +20,6 @@ function MainPage() {
             <SliderTourBlock />
             <WhyWithUs />
             <Teamleads />
-            <Feedbacks />
-            <FeedbackForm />
         </main>
     )
 }

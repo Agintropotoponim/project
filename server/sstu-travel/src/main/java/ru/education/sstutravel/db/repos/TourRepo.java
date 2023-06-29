@@ -15,5 +15,8 @@ public interface TourRepo extends JpaRepository<Tour,Long> {
     //@Query("select e.name from Tour e")
     //List<Tour> toursByUserId(Long id);
 
+    @Query("UPDATE Tour t set t.employee = ?2 where t.id = ?1")
+    void updateTourForEmp(Long tour_id, Long emp_id);
+
 
 }

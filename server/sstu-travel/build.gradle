@@ -21,12 +21,12 @@ dependencies {
 	developmentOnly 'org.springframework.boot:spring-boot-devtools:2.6.2'
 
 	//database
-	//testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
 	implementation 'com.microsoft.sqlserver:mssql-jdbc'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 
-	//spring and lombok
-	//implementation 'org.projectlombok:lombok:1.18.22'
+	//lombok and others
+
 	compileOnly 'org.projectlombok:lombok:1.18.20'
 	annotationProcessor 'org.projectlombok:lombok:1.18.20'
 	implementation 'javax.xml.bind:jaxb-api:2.3.1'
@@ -37,10 +37,10 @@ dependencies {
 	implementation 'me.paulschwarz:spring-dotenv:4.0.0'
 
 	//security
-	//implementation group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '2.7.0'
+
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation('io.jsonwebtoken:jjwt:0.2')
-	//implementation 'org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:2.0.0.RELEASE'
+
 
 
 

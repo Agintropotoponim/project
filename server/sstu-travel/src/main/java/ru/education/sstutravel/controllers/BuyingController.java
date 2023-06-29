@@ -2,6 +2,7 @@ package ru.education.sstutravel.controllers;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import ru.education.sstutravel.db.entities.Buying;
 import ru.education.sstutravel.db.entities.Tour;
@@ -11,6 +12,7 @@ import ru.education.sstutravel.pojo.BuyingRequest;
 import java.util.List;
 
 @RestController
+@PreAuthorize("hasRole('USER') or hasRole('EMPLOYEE') or hasRole('ADMIN')")
 @RequestMapping("/api/buying")
 @CrossOrigin(origins = "*")
 public class BuyingController {

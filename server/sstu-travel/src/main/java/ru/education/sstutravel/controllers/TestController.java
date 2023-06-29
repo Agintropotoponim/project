@@ -34,15 +34,15 @@ public class TestController {
     }
 
     @GetMapping("/user")
-    @PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
+    @PreAuthorize("hasRole('USER') or hasRole('EMPLOYEE') or hasRole('ADMIN')")
     public String userAccess() {
         return "user API";
     }
 
     @GetMapping("/emp")
-    @PreAuthorize("hasRole('MODERATOR') or hasRole('ADMIN')")
+    @PreAuthorize("hasRole('EMPLOYEE') or hasRole('ADMIN')")
     public String moderatorAccess() {
-        return "moderator API";
+        return "employee API";
     }
 
     @GetMapping("/admin")

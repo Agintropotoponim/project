@@ -16,7 +16,6 @@ import java.util.List;
 
 @Entity
 @Table(name = "Employee")
-@ToString(of = {"id", "name"})
 @EqualsAndHashCode(of={"id"})
 @AllArgsConstructor
 @NoArgsConstructor
@@ -29,8 +28,6 @@ public class Employee{
     @JoinColumn(name = "usr")
     private User usr;
     private String position;
-    private String avatar;
-    private String poster;
     @OneToMany(mappedBy = "employee")
     @JsonIgnoreProperties("employee")
     private List<Tour> tours = new ArrayList<>();

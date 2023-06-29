@@ -20,7 +20,9 @@
     display: flex;
     justify-content: space-around;
     width: 100%;
-    border: 1px solid red;
+    height: 1000px;
+
+
 }
 
 .tour{
@@ -30,4 +32,5 @@
     width: fit-content;
     border: 1px solid black;
     border-radius: 10px;
+    height: 300px;
 }

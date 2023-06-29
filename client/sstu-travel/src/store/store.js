@@ -26,7 +26,8 @@ export default class Store {
                 name: response.data.name,
                 surname: response.data.surname,
                 middle_name: response.data.middleName,
-                email: response.data.email
+                email: response.data.email,
+                roles: response.data.roles
             }
 
             AuthService.encryptAndSaveDataToLocalStorage(user)

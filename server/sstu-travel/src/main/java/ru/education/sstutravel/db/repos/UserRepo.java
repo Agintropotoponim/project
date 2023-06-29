@@ -15,7 +15,8 @@ public interface UserRepo extends JpaRepository<User, Long> {
     Boolean existsByUsername(String username);
     Boolean existsByEmail(String email);
 
-
+    //@Query("insert into users_authorities values(?1,?2)")
+    //void insertRoleStatus(Long user_id, Long role_id);
 
     //@Query("select (e.name + ' ' + e.surname) from Employee e where e.id = ?1")
     //String getLeaderName(Long id);

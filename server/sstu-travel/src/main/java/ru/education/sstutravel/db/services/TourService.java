@@ -32,13 +32,16 @@ public class TourService {
     }
 
     public Tour create(Tour tour){
-        //tour.setEmployee(employeeService.getById());
         return tourRepo.save(tour);
     }
 
     public Tour update(Tour tourFromDb, Tour tour) {
         BeanUtils.copyProperties(tour, tourFromDb, "id");
         return tourRepo.save(tourFromDb);
+    }
+
+    public void updateTourForEmp(Long tour_id, Long emp_id){
+        tourRepo.updateTourForEmp(tour_id,emp_id);
     }
 
     public void delete(Tour tour){

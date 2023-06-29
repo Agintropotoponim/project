@@ -1,5 +1,5 @@
 
-import { useContext, useEffect } from 'react';
+import { useContext} from 'react';
 import { Context } from '../../../index';
 import classes from './NavBar.module.css'
 import { Link } from 'react-router-dom'
@@ -10,6 +10,12 @@ const NavBar = observer(() => {
 
     const { store } = useContext(Context)
 
+    let user;
+
+    if (localStorage.getItem("userData") != undefined) {
+        user = AuthService.decryptAndGetDataFromLocalStorage()
+    }
+
     return (
         <nav>
             <div className={classes.div__nav}>
@@ -17,6 +23,17 @@ const NavBar = observer(() => {
                 <ul className={classes.nav}>
                     <li><Link className={classes.link} to={'/'}>Главная</Link></li>
                     <li><Link className={classes.link} to={'/tours'}>Туры</Link></li>
+                    {
+                        user
+                            ?
+                            user.roles.includes("ROLE_EMPLOYEE") && !user.roles.includes("ROLE_ADMIN")
+                                ? <li><Link className={classes.link} to={'/employee/panel'}>Панель</Link></li>
+                                : user.roles.includes("ROLE_ADMIN")
+                                    ? <li><Link className={classes.link} to={'/admin'}>Админ Панель</Link></li>
+                                    : ""
+                            : ""
+                    }
+
                     {
                         (localStorage.getItem("token") == undefined || localStorage.getItem("token") == null)
                             ? <li><Link className={classes.link} to={'/login'}>Вход/Регистрация</Link></li>

@@ -10,6 +10,7 @@ import ru.education.sstutravel.db.entities.Tour;
 import ru.education.sstutravel.db.entities.User;
 import ru.education.sstutravel.db.repos.UserRepo;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -35,6 +36,10 @@ public class UserService {
         return userRepo.save(user);
     }
 
+    public List<User> readAll(){
+        return userRepo.findAll();
+    }
+
     /*
     public User update(User userFromDb, User user) {
         //user.setPassword(userFromDb.getPassword());
@@ -49,7 +54,7 @@ public class UserService {
 
         String newUsername = requestData.getString("username");
 
-        // Проверка на уникальность нового значения username
+        // проверка нового значения username
         if (!userFromDb.getUsername().equals(newUsername) && userRepo.existsByUsername(newUsername)) {
             throw new IllegalArgumentException("Username already exists");
         }
@@ -60,13 +65,17 @@ public class UserService {
                 requestData.getString("middle_name"),
                 requestData.getString("userpic"),
                 requestData.getString("email"),
-                newUsername // Используем новое значение username
+                newUsername //новое значение username
         );
 
         BeanUtils.copyProperties(user, userFromDb, "id","password", "authorities", "tours");
 
         userRepo.save(userFromDb);
     }
+
+    //public void insertRoleStatus(Long user_id, Long role_id){
+    //    userRepo.insertRoleStatus(user_id,role_id);
+    //}
 
     public User getById(Long id){
         return userRepo.getById(id);

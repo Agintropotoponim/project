@@ -10,6 +10,8 @@ import Profile from '../pages/Profile';
 import Emoloyees from '../pages/Employees';
 import PageIsNotFound from '../pages/PageIsNotFound';
 import Tours from '../pages/Tours';
+import EmployeePanel from '../pages/EmployeePanel';
+import AdminPanel from '../pages/AdminPanel';
 
 function AppRouter() {
     return (
@@ -26,6 +28,10 @@ function AppRouter() {
 
             <Route element={<Emoloyees />} path='/employees/:id' />
             <Route element={<Tours />} path='/tours/:id' />
+
+            <Route element={<EmployeePanel />} path='/employee/panel' />
+
+            <Route element={<AdminPanel />} path='/admin' />
 
             <Route element={<PageIsNotFound />} path='/status500' />
         </Routes>

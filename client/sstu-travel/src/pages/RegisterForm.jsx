@@ -4,7 +4,6 @@ import { Link, useNavigate } from "react-router-dom";
 import classes from './LoginForm.module.css'
 import $api from "../http/index.js";
 
-import Input from 'react-validation/build/input';
 
 
 function RegisterForm() {

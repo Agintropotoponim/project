@@ -25,10 +25,11 @@ public class EmployeeService {
     }
 
 
-
     public Employee getById(Long id){
         return empRepo.getById(id);
     }
+
+    public Employee getByUserId(Long id) {return empRepo.getEmployeeByUsr(id);}
 
     public long getCount(){
         return empRepo.count();
@@ -40,6 +41,10 @@ public class EmployeeService {
     public Employee update(Employee empFromDb, Employee emp) {
         BeanUtils.copyProperties(emp, empFromDb, "id");
         return empRepo.save(empFromDb);
+    }
+
+    public Long getIdByUsrId(Long id){
+        return empRepo.getEmpByUsrId(id);
     }
 
 
